@@ -43,7 +43,6 @@ function markdownToHTML(markdown) {
     return cleanHtml;
 }
 
-
 function showMessage(message) {
     const statusMessage = document.getElementById('status-message');
     statusMessage.textContent = message;

@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor Markdown</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="editor">
-        <button id="toggle-theme">Cambiar Tema</button>
-        <button id="save-file">Guardar</button>
+        <button id="toggle-theme" aria-label="Cambiar entre tema claro y oscuro">
+            <i class="fas fa-adjust"></i> Cambiar Tema
+        </button>
+        <button id="save-file" aria-label="Guardar archivo Markdown">
+            <i class="fas fa-save"></i> Guardar
+        </button>
         <input type="file" id="load-file" style="display:none;">
-        <label for="load-file" id="load-file-label">Cargar</label>
-        <textarea id="markdown" placeholder="Escribe en Markdown..."></textarea>
-        <div id="preview"></div>
-        <div id="status-message"></div>
+        <label for="load-file" id="load-file-label" aria-label="Cargar archivo Markdown">
+            <i class="fas fa-upload"></i> Cargar
+        </label>
+        <textarea id="markdown" placeholder="Escribe en Markdown..." aria-label="Editor de texto Markdown"></textarea>
+        <div id="preview" aria-live="polite" aria-label="Vista previa del contenido convertido a HTML"></div>
+        <div id="status-message" role="alert" aria-live="assertive"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.4/dist/purify.min.js"></script>
